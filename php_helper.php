@@ -21,8 +21,16 @@
       
       if(empty($errors)==true){
          move_uploaded_file($file_tmp,"resource/".$file_name);
+         shell_exec('chmod 777 start.sh');
+         shell_exec('./start.sh '.$file_name);
          echo json_encode(['success'=>'uploaded!']); 
       }else{
          print_r($errors);
       }
+
+    //start shell command to make matlan run
+      
    }
+
+   
+?>

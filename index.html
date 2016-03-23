@@ -90,6 +90,9 @@
     <script src="js/fileinput.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
+
+    var success_panel = $('<div class="alert alert-success"><a class="btn btn-sm btn-success" href="/webapp/result.php">Click here</a> to view / download your resized image file.</div>');
+
 $("#images").fileinput({
     uploadUrl: "http://localhost:8888/webapp/php_helper.php",
     autoReplace: true,
@@ -104,6 +107,7 @@ $("#images").fileinput({
     $('#kv-success-box').html('');
 }).on('fileuploaded', function(event, data) {
     $('#kv-success-box').append(data.response.success);
+    $('#kv-success-box').append(success_panel);
     $('#kv-success-modal').modal('show');
     });
 
