@@ -9,6 +9,6 @@
 ### RR1(Reserved), RR2(Chi), RR3(Hu)
 
 ## Filenames
-### reflection_name = reflection.jpg 
-### background_name = background_xxxx.jpg  
-/*background_6300.jpg*/
+### reflection_name = reflection.png
+### background_name = background_xxxx.png  
+/*background_6300.png*/
