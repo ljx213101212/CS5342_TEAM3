@@ -6,6 +6,6 @@ output_path = [wd, '/result/']
 
 % function name: RR1(Reserved), RR2(Chi), RR3(Hu)
 
-% filenames 
+% filenames
 reflection_name = reflection.jpg 
 background_name = background_xxxx.jpg  //background_6300.jpg
