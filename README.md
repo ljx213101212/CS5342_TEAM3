@@ -9,6 +9,9 @@
 ### RR1(Reserved), RR2(Chi), RR3(Hu)
 
 ## Filenames
-### reflection_name = reflection_xxxx.png //use _xxxx too!!!!
-### background_name = background_xxxx.png  
-/*background_6300.png*/
+### For RR1:
+#### reflection_name = reflection_xxxx.png
+#### shading_name = shading_xxxx.png 
+### For RR2 & RR3:
+### reflection_name = reflection_xxxx.png
+### background_name = background_xxxx.png 
