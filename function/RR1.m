@@ -3,7 +3,7 @@
 
 %% Set Work Directory!!!!
 %wd = '/Users/lijixiang/Documents/ISS/SEProject';
-wd = '/Users/lijixiang/Documents/ISS/SEProject/DEMO_RR1&RR2'; %%% For Test
+wd = '/Users/lijixiang/Documents/ISS/SEProject/DEMO_RR1-RR2'; % For Test
 
 %% Set Path & Scan Images
 
