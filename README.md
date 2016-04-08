@@ -1,7 +1,7 @@
 # CS5342_TEAM3
 
 ## Directories
-### wd = 'Users/lijixiang/Documents/ISS/SEProject/'
+### wd = '/Users/lijixiang/Documents/ISS/SEProject/'
 ### input_path = [wd, '/resource/']
 ### output_path = [wd, '/result/']
 
