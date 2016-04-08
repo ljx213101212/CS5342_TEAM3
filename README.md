@@ -6,7 +6,7 @@
 ###### output_path = [wd, '/result/']
 
 #### Functions Directory
-###### Just upload your .m scripts to '/function'.
+###### Just upload your .m scripts to 'ljx213101212/CS5342_TEAM3/function'.
 
 #### Function name
 ###### RR1(Reserved), RR2(Chi), RR3(Hu)
