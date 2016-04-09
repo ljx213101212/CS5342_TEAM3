@@ -1,8 +1,8 @@
 # CS5342_TEAM3
 
 #### Working Directory
-<!--###### wd = '/Users/lijixiang/Documents/ISS/SEProject/'-->
-###### wd = '/Users/jixiang/Documents/ISS/SEProject/team_git/webapp'
+*wd = '/Users/lijixiang/Documents/ISS/SEProject/'*
+###### wd = '/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/'
 ###### input_path = [wd, '/resource/']
 ###### output_path = [wd, '/result/']
 
