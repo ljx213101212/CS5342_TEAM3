@@ -3,7 +3,7 @@
 
 %% FOR TEST!!!!!!!!!!!!!!!!!!!!
 temp = cellstr(pwd);
-wd = [temp{1},'/../DEMO_RR1&RR2'];
+wd = [temp{1},'/../DEMO_RR1-RR2'];
 
 %% Set The Work Directory before demo
 %wd = '/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/';
