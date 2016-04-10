@@ -14,6 +14,11 @@ tic;
 % input_path = [wd, 'resource\'];
 % output_path = [wd, 'result\'];
 wd = '/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/';
+
+% FOR TEST!!!!!!!!!!!!!!!!!!!!
+temp = cellstr(pwd);
+wd = [temp{1},'/../DEMO_RR3/'];
+
 input_path = [wd, 'resource/'];
 output_path = [wd, 'result/'];
 
