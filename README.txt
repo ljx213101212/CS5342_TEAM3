@@ -16,19 +16,19 @@ Each member’s contribution to this project:
 
 CHI JI: 
     1) Survey & Discussion; 
-    2) Data collection
+    2) Data collection;
     3) Implementation of layer separation algorithm based on Relative Smoothness on MATLAB;
     4) Report;
     
 HU SIXING:
     1) Survey & Discussion; 
-    2) Data collection
+    2) Data collection;
     3) Implementation of layer separation algorithm based on Reflection Change on MATLAB;
     4) Report;
 
 LI JIXIANG: 
     1) Survey & Discussion; 
-    2) Data collection
+    2) Data collection;
     3) Webpage Development;
     4) Server-Side Development;
     
