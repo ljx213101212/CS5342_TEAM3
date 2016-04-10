@@ -31,7 +31,7 @@ fprintf(logpath,'LOG\n');
 %% Reflection Removal 
 
 disp('Reflection Removal');
-disp(pwd);
+%disp(pwd);
 
 for i=1:num_rmrf_jgp
     lambda = 10;  % Can be tuned
