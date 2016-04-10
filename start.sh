@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd  /Users/jixiang/Documents/MATLAB/finalProject_demo
+cd  /Users/jixiang/Documents/ISS/SEProject/team_git/webapp/function/
 
 export PATH="/Applications/MATLAB_R2015a.app/bin:$PATH"
-matlab -nodesktop -nojvm -nosplash -r "demo('$1')"
+matlab -nodesktop -nosplash -r "$1"

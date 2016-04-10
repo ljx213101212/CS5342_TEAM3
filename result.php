@@ -29,11 +29,11 @@
     <div class="row">
         <div class="col-lg-6">
             <h3>Origin</h3>
-            <img class="my-dotted-border" src="/webapp/result/input.jpg" />
+            <img class="my-dotted-border" src="/webapp/result/background*.png" />
         </div>    
         <div class="col-lg-6">
             <h3>Result</h3>
-            <img class="my-dotted-border" src="/webapp/result/reflectace.jpg" />
+            <img class="my-dotted-border" src="/webapp/result/reflection*.png" />
         </div>
     </div>
 

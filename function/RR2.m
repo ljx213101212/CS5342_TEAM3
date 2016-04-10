@@ -2,8 +2,8 @@
 % mcc -m RR2 reflection_removal.m
 
 %% Set Work Directory!!!!
-%wd = '/Users/lijixiang/Documents/ISS/SEProject';
-wd = '/Users/lijixiang/Documents/ISS/SEProject/DEMO_RR1-RR2'; %%% For Test 
+wd = '/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/';
+%wd = '/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/DEMO_RR1-RR2'; %%% For Test 
 
 %% Set Path & Scan Images
 
@@ -27,6 +27,7 @@ fprintf(logpath,'LOG\n');
 %% Reflection Removal 
 
 disp('Reflection Removal');
+disp(pwd);
 
 for i=1:num_rmrf_jgp
     lambda = 10;  % Can be tuned
@@ -37,6 +38,7 @@ for i=1:num_rmrf_jgp
     fprintf(logpath,'Time consumption: %.4fs\n',time);
     
     cd ../result
+    disp(pwd);
     saveas(imshow(LB*1.5),['background_',num2str(floor(time*1000))],'png');
     saveas(imshow(LR*1.5),['reflection_',num2str(floor(time*1000))],'png');
     cd ../function
@@ -51,6 +53,7 @@ for i=1:num_rmrf_png
     fprintf(logpath,'Time consumption: %.4fs\n',time);
 
     cd ../result
+    disp(pwd);
     saveas(imshow(LB*1.5),['background_',num2str(floor(time*1000))],'png');
     saveas(imshow(LR*1.5),['reflection_',num2str(floor(time*1000))],'png');
     cd ../function

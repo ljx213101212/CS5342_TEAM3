@@ -10,7 +10,7 @@ $success = 1;
 
 clean_folder();
 
-// print_r($_POST['id']);
+print_r($_POST['id']);
 
 $matlab_method_name = "RR3";
 
@@ -68,7 +68,7 @@ if ((count($imageTemp) == count($imageList)) ==
 	}
 
 	//execute matlab file
-	exe_matlab();
+	//exe_matlab();
 	echo json_encode(['success'=>"success"]); 
 
 }else{
