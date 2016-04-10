@@ -1,4 +1,4 @@
-# CS5342_TEAM3
+# CS5342_TEAM2
 
 NOTE: 
 The function of our website and server side will be presented when we do our DEMO in the classroom.
