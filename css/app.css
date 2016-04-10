@@ -18,6 +18,9 @@ border-top-left-radius:5px;
 border-top-right-radius:5px;
 border-bottom-left-radius:5px;
 border-bottom-right-radius:5px;
+
+
+    margin: 0 auto;
 }
 
 .margin-left-buffer-10px{
@@ -35,4 +38,12 @@ border-bottom-right-radius:5px;
 
     text-align: right;
     margin-bottom: 5px;
+}
+
+.result-container{
+
+    margin: 0 auto;
+
+    margin-left: 5%;
+    margin-right: 5%;
 }

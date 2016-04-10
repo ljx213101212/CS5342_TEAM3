@@ -2,11 +2,11 @@
 % mcc -m RR2 reflection_removal.m
 
 %% FOR TEST!!!!!!!!!!!!!!!!!!!!
-temp = cellstr(pwd);
-wd = [temp{1},'/../DEMO_RR1-RR2'];
+%temp = cellstr(pwd);
+%wd = [temp{1},'/../DEMO_RR1-RR2'];
 
 %% Set Work Directory!!!!
-%wd = '/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/';
+wd = '/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/';
 
 
 %% Set Path & Scan Images
