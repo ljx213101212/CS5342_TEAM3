@@ -10,13 +10,13 @@ $success = 1;
 
 clean_folder();
 
-print_r($_POST['id']);
+// print_r($_POST['id']);
 
-
+$matlab_method_name = "RR3";
 
 $file = $_FILES['image'];
 
-print_r($file);
+// print_r($file);
 
 //echo json_encode(['success' => count($imageTemp)]);
 
@@ -56,22 +56,20 @@ for ($i = 0 ; $i < count($file['tmp_name']); $i++){
 	}
 
 
-echo json_encode(['success' => $file_name]);
+//echo json_encode(['success' => $file_name]);
 }
-// $imageTemp = $_FILES['image']);
-
-
-
-
-echo json_encode(['success' => count($imageTemp)]);
 
 if ((count($imageTemp) == count($imageList)) == 
 	(count($imageSizeList) && count($imageTemp))){
 
 	for ($i = 0 ; $i < count($imageTemp);$i++){
-		print_r($imageTemp[$i]);
-		move_uploaded_file($imageTemp[$i], "resource/".$imageSizeList[$i]."_".$imageList[$i]);
+		//print_r($imageTemp[$i]);
+		move_uploaded_file($imageTemp[$i], "resource/".$imageList[$i]);
 	}
+
+	//execute matlab file
+	exe_matlab();
+	echo json_encode(['success'=>"success"]); 
 
 }else{
 	echo json_encode(['error' => "some images uploaded cannnot be processed"]);
@@ -86,8 +84,12 @@ function clean_folder(){
   		if(is_file($file))
     	unlink($file); // delete file
 	}
+}
 
+function exe_matlab(){
 
+	shell_exec('chmod 777 start2.sh');
+    shell_exec('./start2.sh '.$matlab_method_name);
 }
 
 //echo json_encode(['success' => 'uploaded!']);

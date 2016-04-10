@@ -11,8 +11,8 @@
 
       $file_algo = $_FILES['image']['algo_select'];
 
-      print_r($file_name);
-      print_r($file_algo);
+      // print_r($file_name);
+      // print_r($file_algo);
       
       $expensions= array("jpg","png");
       
@@ -25,10 +25,10 @@
       // }
       
       if(empty($errors)==true){
-         move_uploaded_file($file_tmp,"resource/".$file_size."_".$file_name);
-         //shell_exec('chmod 777 start.sh');
-         //shell_exec('./start.sh '.$file_name);
-         echo json_encode(['success'=>$file_algo]); 
+         move_uploaded_file($file_tmp,"resource/".$file_name);
+         shell_exec('chmod 777 start.sh');
+         shell_exec('./start.sh '.$file_name);
+         echo json_encode(['success'=>"image processed!"]); 
       }else{
          print_r($errors);
       }
