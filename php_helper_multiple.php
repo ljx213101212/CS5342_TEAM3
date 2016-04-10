@@ -10,9 +10,11 @@ $success = 1;
 
 clean_folder();
 
+$algo_name = $_POST['algo_select'];
+
 //print_r($_POST['id']);
 
-$matlab_method_name = "RR3";
+$matlab_method_name = $algo_name;
 
 $file = $_FILES['image'];
 

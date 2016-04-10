@@ -1,0 +1,4 @@
+LOG
+
+Processing intrinsic_images-1...
+Time consumption: 5.5809s

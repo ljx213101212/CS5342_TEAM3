@@ -1,11 +1,41 @@
 <?php
-// echo chdir('/Users/jixiang/Documents/MATLAB/finalProject_demo');
-// echo shell_exec('ls');
-//echo shell_exec("matlab -nodesktop -nojvm -nosplash -r demo('123.jpg')");
+//echo __FILE__; 
+$dir = "/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/result";
 
-// $command = "matlab -nodesktop -nojvm -nosplash -r demo";
-// $res = exec($command, $output, $return);
-// var_dump($res, $output, $return);
-echo shell_exec('chmod 777 start.sh');
-echo shell_exec('./start.sh test.jpg');
+$array = scandir($dir,1);
+
+//print_r($array);
+
+
+
+$result = "";
+$mark = 0;
+foreach ($array as $key => $value) {
+    
+    $temp = split('_',$value);
+    //print_r($temp);
+    foreach ($temp as $key2 => $value2) {
+        
+        if (!strcmp($value2,"reflection")){
+            $mark = 1;
+            //echo $value2;
+        }
+        if ($mark == 1){
+            if ($key2 == 0){
+                 $result = $result.$value2;
+            }else{
+                $result = $result."_".$value2;
+            }
+        }
+    } 
+
+    if ($mark == 1){
+            break;
+    }
+}
+
+echo $result;
+
+
+
 ?>

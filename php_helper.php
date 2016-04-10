@@ -2,7 +2,8 @@
 
 
 clean_folder();
-$algo_id = $_POST['algo'];
+$algo_name = $_POST['algo_select'];
+
 //current path
  if(isset($_FILES['image'])){
       $errors= array();
@@ -14,7 +15,7 @@ $algo_id = $_POST['algo'];
 
       $file_algo = $_FILES['image']['algo_select'];
 
-      $matlab_method_name = "RR3";
+      $matlab_method_name = $algo_name;
 
       // print_r($file_name);
       // print_r($file_algo);
@@ -34,6 +35,7 @@ $algo_id = $_POST['algo'];
          shell_exec('chmod 777 start.sh');
          shell_exec('./start.sh '.$matlab_method_name);
          echo json_encode(['success'=>"image processed!"]); 
+         //echo json_encode(['file_name' => $file_name]);
       }else{
          print_r($errors);
       }
@@ -46,6 +48,12 @@ $algo_id = $_POST['algo'];
 function clean_folder(){
 
    $files = glob('resource/*'); // get all file names
+   foreach($files as $file){ // iterate files
+      if(is_file($file))
+      unlink($file); // delete file
+   }
+
+   $files = glob('result/*'); // get all file names
    foreach($files as $file){ // iterate files
       if(is_file($file))
       unlink($file); // delete file

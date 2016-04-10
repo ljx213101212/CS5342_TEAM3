@@ -8,7 +8,7 @@
     <meta name="keywords" content="slide-menu, sidebar, off-canvas, menu, navigation"/>
     <meta name="author" content="AcasA Programming">
 
-    <title>Off-canvas navigation menu Tutorial</title>
+    <title>Multimedia</title>
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="css/app.css"/>
@@ -37,8 +37,9 @@
 
         <nav class="slide-menu">
             <ul>
-                <li><a href="/webapp/index.html"><i class="fa fa-star"></i>RR1&RR2</a></li>
-                <li><a href="/webapp/index2.html"><i class="fa fa-star"></i>RR3</a></li>
+                <li><a href="/webapp/index.html"><i class="fa fa-star"></i>RR1</a></li>
+                <li><a href="/webapp/index2.html"><i class="fa fa-star"></i>RR2</a></li>
+                <li><a href="/webapp/index3.html"><i class="fa fa-star"></i>RR3</a></li>
                 <li><a href="#"><i class="fa fa-cogs"></i>Comparision</a></li>
             </ul>
         </nav><!--end slide-menu -->
@@ -61,20 +62,12 @@
         </header>
 
         <div class="menu-options clearfix">
-            <h5>(prototype) ver1.0</h5>
+            <h5>Relative Smoothness 1</h5>
         </div>
 
         <div class="container">
 
-
-            <div class="my-select">
-                <select class="selectpicker">
-                    <option value="1">RR1</option>
-                    <option value="2">RR2</option>
-                </select>
-
-            </div>
-            <!-- AUTO REPLACE AFTER EVERY 1 FILE SELECTED -->
+                    <!-- AUTO REPLACE AFTER EVERY 1 FILE SELECTED -->
             <input id="images" name="image" type="file" class="file-loading" accept="image/*">
             <div id="kv-success-modal" class="modal fade">
                 <div class="modal-dialog">
@@ -106,8 +99,8 @@
 
 
     var success_panel = $('<div class="alert alert-success"><a class="btn btn-sm btn-success" href="/webapp/result.php">Click here</a> to view / download your resized image file.</div>');
-    var algo = $('.selectpicker').val();
-    alert(algo);
+    var file_name = "";
+    //alert($('.selectpicker').selectpicker('val'));
 
     $("#images").fileinput({
         uploadUrl: "http://localhost:8888/webapp/php_helper.php",
@@ -116,16 +109,36 @@
         maxFileCount: 1,
         allowedFileExtensions: ["jpg", "png"],
         uploadExtraData: {
-            algo_select: algo,
+            algo_select: "RR1",
         }
     }).on('filepreupload', function () {
+        
         $('#kv-success-box').html('');
+        $('.progress-bar').css("width",0+"px");
+        $('.progress-bar').html(0);
+        setUpWaitingBar();
     }).on('fileuploaded', function (event, data) {
+        $('.progress-bar').html(100+'%');
         $('#kv-success-box').append(data.response.success);
+        // $('#kv-success-box').append(data.response.file_name);
         $('#kv-success-box').append(success_panel);
         $('#kv-success-modal').modal('show');
     });
 
+
+function setUpWaitingBar(){
+var i = 0;
+var counterBack = setInterval(function(){
+  i+=3;
+  if(i<100){
+    $('.progress-bar').css('width', i+'%');
+    $('.progress-bar').html(i+'%');
+  } else {
+    clearTimeout(counterBack);
+  }
+
+}, 1000);
+}
 </script>
 </body>
 </html>
