@@ -1,125 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Off-canvas navigation menu Tutorial">
-    <meta name="keywords" content="slide-menu, sidebar, off-canvas, menu, navigation" />
+    <meta name="keywords" content="slide-menu, sidebar, off-canvas, menu, navigation"/>
     <meta name="author" content="AcasA Programming">
 
     <title>Off-canvas navigation menu Tutorial</title>
 
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/slide.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/fileinput.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slide.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/fileinput.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css"/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <input type="checkbox" id="offcanvas-menu" class="toggle" />
+<input type="checkbox" id="offcanvas-menu" class="toggle"/>
 
-    <div class="my-container">
+<div class="my-container">
 
-      <aside class="menu-container">
+    <aside class="menu-container">
 
         <div class="menu-heading clearfix">
-          <label for="offcanvas-menu" class="close-btn">
-            <i class="fa fa-times"></i>
-          </label>
+            <label for="offcanvas-menu" class="close-btn">
+                <i class="fa fa-times"></i>
+            </label>
         </div><!--end menu-heading-->
 
-      <nav class="slide-menu">
-        <ul>
-          <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-          <li><a href="#"><i class="fa fa-star"></i>Favorites</a></li>
-          <li><a href="#"><i class="fa fa-folder-open"></i>Categories</a></li>
-          <li><a href="#"><i class="fa fa-cogs"></i>Settings</a></li>
-        </ul>
-      </nav><!--end slide-menu -->
+        <nav class="slide-menu">
+            <ul>
+                <li><a href="/webapp/index.html"><i class="fa fa-star"></i>RR1&RR2</a></li>
+                <li><a href="/webapp/index2.html"><i class="fa fa-star"></i>RR3</a></li>
+                <li><a href="#"><i class="fa fa-cogs"></i>Comparision</a></li>
+            </ul>
+        </nav><!--end slide-menu -->
 
     </aside><!--end menu-container-->
 
     <section class="content">
 
-    <!--  <label for="offcanvas-menu" class="full-screen-close"></label> -->
+        <!--  <label for="offcanvas-menu" class="full-screen-close"></label> -->
 
-      <div class="menu">
-        <label for="offcanvas-menu" class="toggle-btn">
-              <i class="fa fa-bars"></i>
+        <div class="menu">
+            <label for="offcanvas-menu" class="toggle-btn">
+                <i class="fa fa-bars"></i>
             </label>
         </div><!--end menu-->
 
+
         <header>
-          <h1>Multimedia Application project</h1>
+            <h1>Multimedia Application project</h1>
         </header>
 
         <div class="menu-options clearfix">
-          <h5>(prototype) ver1.0</h5>
+            <h5>(prototype) ver1.0</h5>
         </div>
 
         <div class="container">
 
-            <select id="myselect">
-              <option value="1">Algorithum1</option>
-              <option value="2">Algorithum2</option>
-            </select>
 
+            <div class="my-select">
+                <select class="selectpicker">
+                    <option value="1">RR1</option>
+                    <option value="2">RR2</option>
+                </select>
+
+            </div>
             <!-- AUTO REPLACE AFTER EVERY 1 FILE SELECTED -->
-              <input id="images" name="image" type="file" class="file-loading" accept="image/*">
-              <div id="kv-success-modal" class="modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Yippee!</h4>
-      </div>
-      <div id="kv-success-box" class="modal-body">
-      </div>
-    </div>
-  </div>
-</div>
- 
+            <input id="images" name="image" type="file" class="file-loading" accept="image/*">
+            <div id="kv-success-modal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Yippee!</h4>
+                        </div>
+                        <div id="kv-success-box" class="modal-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </div><!--end upload-->
-      </section><!--end content-->
-    </div> <!--end container -->
+    </section><!--end content-->
+</div> <!--end container -->
 
 
-    <!--js-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/plugins/canvas-to-blob.min.js"></script>
-    <script src="js/fileinput.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
+<!--js-->
+<script src="js/jquery.min.js"></script>
+<script src="js/plugins/canvas-to-blob.min.js"></script>
+<script src="js/fileinput.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script>
 
-    var algorithum_select = $("#myselect" ).val();
-
-    alert(algorithum_select);
 
     var success_panel = $('<div class="alert alert-success"><a class="btn btn-sm btn-success" href="/webapp/result.php">Click here</a> to view / download your resized image file.</div>');
+    var algo = $('.selectpicker').val();
+    alert(algo);
 
-$("#images").fileinput({
-    uploadUrl: "http://localhost:8888/webapp/php_helper.php",
-    //uploadUrl: "http://192.168.43.81:8888/webapp/php_helper.php",
-    autoReplace: true,
-    maxFileCount: 1,
-    allowedFileExtensions: ["jpg", "png"],
-    uploadExtraData: {
-       algo_select: algorithum_select,     
-    }
-}).on('filepreupload', function() {
-    $('#kv-success-box').html('');
-}).on('fileuploaded', function(event, data) {
-    $('#kv-success-box').append(data.response.success);
-    $('#kv-success-box').append(success_panel);
-    $('#kv-success-modal').modal('show');
+    $("#images").fileinput({
+        uploadUrl: "http://localhost:8888/webapp/php_helper.php",
+        //uploadUrl: "http://192.168.43.81:8888/webapp/php_helper.php",
+        autoReplace: true,
+        maxFileCount: 1,
+        allowedFileExtensions: ["jpg", "png"],
+        uploadExtraData: {
+            algo_select: algo,
+        }
+    }).on('filepreupload', function () {
+        $('#kv-success-box').html('');
+    }).on('fileuploaded', function (event, data) {
+        $('#kv-success-box').append(data.response.success);
+        $('#kv-success-box').append(success_panel);
+        $('#kv-success-modal').modal('show');
     });
 
 </script>
-  </body>
+</body>
 </html>

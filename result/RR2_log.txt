@@ -1,4 +1,0 @@
-LOG
-
-Processing reflection_removal-1...
-Time consumption: 1.7868s

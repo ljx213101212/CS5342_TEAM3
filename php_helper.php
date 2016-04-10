@@ -2,6 +2,7 @@
 
 
 clean_folder();
+$algo_id = $_POST['algo'];
 //current path
  if(isset($_FILES['image'])){
       $errors= array();

@@ -30,3 +30,9 @@ border-bottom-right-radius:5px;
 .text-centered{
     text-align: center;
 }
+
+.my-select{
+
+    text-align: right;
+    margin-bottom: 5px;
+}
