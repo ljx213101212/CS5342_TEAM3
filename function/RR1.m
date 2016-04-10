@@ -38,8 +38,10 @@ for i=1:num_intr_jpg
     fprintf(logpath,'Time consumption: %.4fs\n',time);
     
     cd ../result
-    saveas(imshow(S),['shading_',num2str(floor(time*1000))],'png');
-    saveas(imshow(R),['reflection_',num2str(floor(time*1000))],'png');
+    %saveas(imshow(S),['shading_',num2str(floor(time*1000))],'png');
+    %saveas(imshow(R),['reflection_',num2str(floor(time*1000))],'png');
+    imwrite(S,['shading_',num2str(floor(time*1000)),'.png']);
+    imwrite(R,['reflection_',num2str(floor(time*1000)),'.png']);
     cd ../function
 end
 
@@ -52,8 +54,10 @@ for i=1:num_intr_png
     fprintf(logpath,'Time consumption: %.4fs\n',time);
     
     cd ../result
-    saveas(imshow(S),['shading_',num2str(floor(time*1000))],'png');
-    saveas(imshow(R),['reflection_',num2str(floor(time*1000))],'png');
+    %saveas(imshow(S),['shading_',num2str(floor(time*1000))],'png');
+    %saveas(imshow(R),['reflection_',num2str(floor(time*1000))],'png');
+    imwrite(S,['shading_',num2str(floor(time*1000)),'.png']);
+    imwrite(R,['reflection_',num2str(floor(time*1000)),'.png']);
     cd ../function
 end
 
