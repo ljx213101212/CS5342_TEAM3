@@ -39,8 +39,10 @@ for i=1:num_rmrf_jgp
     
     cd ../result
     disp(pwd);
-    saveas(imshow(LB*1.5),['background_',num2str(floor(time*1000))],'png');
-    saveas(imshow(LR*1.5),['reflection_',num2str(floor(time*1000))],'png');
+    %saveas(imshow(LB*1.5),['background_',num2str(floor(time*1000))],'png');
+    %saveas(imshow(LR*1.5),['reflection_',num2str(floor(time*1000))],'png');
+    imwrite(LB*1.5,['background_',num2str(floor(time*1000)),'.png']);
+    imwrite(LR*1.5,['reflection_',num2str(floor(time*1000)),'.png']);
     cd ../function
 end
 
@@ -54,8 +56,10 @@ for i=1:num_rmrf_png
 
     cd ../result
     disp(pwd);
-    saveas(imshow(LB*1.5),['background_',num2str(floor(time*1000))],'png');
-    saveas(imshow(LR*1.5),['reflection_',num2str(floor(time*1000))],'png');
+    %saveas(imshow(LB*1.5),['background_',num2str(floor(time*1000))],'png');
+    %saveas(imshow(LR*1.5),['reflection_',num2str(floor(time*1000))],'png');
+    imwrite(LB*1.5,['background_',num2str(floor(time*1000)),'.png']);
+    imwrite(LR*1.5,['reflection_',num2str(floor(time*1000)),'.png']);
     cd ../function
 end
 
