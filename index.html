@@ -67,7 +67,7 @@
 
         <div class="container">
 
-                    <!-- AUTO REPLACE AFTER EVERY 1 FILE SELECTED -->
+            <!-- AUTO REPLACE AFTER EVERY 1 FILE SELECTED -->
             <input id="images" name="image" type="file" class="file-loading" accept="image/*">
             <div id="kv-success-modal" class="modal fade">
                 <div class="modal-dialog">
@@ -112,13 +112,13 @@
             algo_select: "RR1",
         }
     }).on('filepreupload', function () {
-        
+
         $('#kv-success-box').html('');
-        $('.progress-bar').css("width",0+"px");
+        $('.progress-bar').css("width", 0 + "px");
         $('.progress-bar').html(0);
         setUpWaitingBar();
     }).on('fileuploaded', function (event, data) {
-        $('.progress-bar').html(100+'%');
+        $('.progress-bar').html(100 + '%');
         $('#kv-success-box').append(data.response.success);
         // $('#kv-success-box').append(data.response.file_name);
         $('#kv-success-box').append(success_panel);
@@ -126,19 +126,19 @@
     });
 
 
-function setUpWaitingBar(){
-var i = 0;
-var counterBack = setInterval(function(){
-  i+=3;
-  if(i<100){
-    $('.progress-bar').css('width', i+'%');
-    $('.progress-bar').html(i+'%');
-  } else {
-    clearTimeout(counterBack);
-  }
+    function setUpWaitingBar() {
+        var i = 0;
+        var counterBack = setInterval(function () {
+            i += 3;
+            if (i < 100) {
+                $('.progress-bar').css('width', i + '%');
+                $('.progress-bar').html(i + '%');
+            } else {
+                clearTimeout(counterBack);
+            }
 
-}, 1000);
-}
+        }, 1000);
+    }
 </script>
 </body>
 </html>

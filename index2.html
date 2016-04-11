@@ -112,32 +112,32 @@
             algo_select: "RR2",
         }
     }).on('filepreupload', function () {
-        
+
         $('#kv-success-box').html('');
-        $('.progress-bar').css("width",0+"px");
+        $('.progress-bar').css("width", 0 + "px");
         $('.progress-bar').html(0);
         setUpWaitingBar();
     }).on('fileuploaded', function (event, data) {
-        $('.progress-bar').html(100+'%');
+        $('.progress-bar').html(100 + '%');
         $('#kv-success-box').append(data.response.success);
         $('#kv-success-box').append(success_panel);
         $('#kv-success-modal').modal('show');
     });
 
 
-function setUpWaitingBar(){
-var i = 0;
-var counterBack = setInterval(function(){
-  i+=3;
-  if(i<100){
-    $('.progress-bar').css('width', i+'%');
-    $('.progress-bar').html(i+'%');
-  } else {
-    clearTimeout(counterBack);
-  }
+    function setUpWaitingBar() {
+        var i = 0;
+        var counterBack = setInterval(function () {
+            i += 3;
+            if (i < 100) {
+                $('.progress-bar').css('width', i + '%');
+                $('.progress-bar').html(i + '%');
+            } else {
+                clearTimeout(counterBack);
+            }
 
-}, 1000);
-}
+        }, 1000);
+    }
 </script>
 </body>
 </html>

@@ -38,18 +38,18 @@ $util = new Utils();
 
                 //$dir = INPUT_IMG_PATH;
                 //$array = scandir($dir, 1);
-                $array = $util -> get_input_array();
+                $array = $util->get_input_array();
                 ?>
-                <img class="img-responsive my-dotted-border" src="<?=HTML_INPUT_IMG_PATH?><?= $array[0] ?>"/>
+                <img class="img-responsive my-dotted-border" src="<?= HTML_INPUT_IMG_PATH ?><?= $array[0] ?>"/>
             </div>
 
             <?php
-                $name_prefix = "reflection";
-                $result = $util -> get_output_image_name($name_prefix);
+            $name_prefix = "reflection";
+            $result = $util->get_output_image_name($name_prefix);
             ?>
             <div class="col-lg-6 text-centered">
                 <h3>Result</h3>
-                <img class="img-responsive my-dotted-border" src="<?=HTML_OUTPUT_IMG_PATH?><?= $result?>"/>
+                <img class="img-responsive my-dotted-border" src="<?= HTML_OUTPUT_IMG_PATH ?><?= $result ?>"/>
             </div>
         </div>
 

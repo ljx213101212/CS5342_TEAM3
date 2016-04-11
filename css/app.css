@@ -1,46 +1,50 @@
-.left{
+/*
+This is the global style sheets for this webapp demo
+*/
+
+.left {
     width: 250px;
     height: 250px;
     float: left;
 }
 
-.my-dotted-border{
-    border:dashed 2px #c4c4c4;
--moz-border-radius-topleft: 5px;
--moz-border-radius-topright:5px;
--moz-border-radius-bottomleft:5px;
--moz-border-radius-bottomright:5px;
--webkit-border-top-left-radius:5px;
--webkit-border-top-right-radius:5px;
--webkit-border-bottom-left-radius:5px;
--webkit-border-bottom-right-radius:5px;
-border-top-left-radius:5px;
-border-top-right-radius:5px;
-border-bottom-left-radius:5px;
-border-bottom-right-radius:5px;
-
+.my-dotted-border {
+    border: dashed 2px #c4c4c4;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
     margin: 0 auto;
 }
 
-.margin-left-buffer-10px{
+.margin-left-buffer-10px {
     margin-left: 10px;
 }
-.margin-right-buffer-10px{
+
+.margin-right-buffer-10px {
     margin-right: 10px;
 }
 
-.text-centered{
+.text-centered {
     text-align: center;
 }
 
-.my-select{
+.my-select {
 
     text-align: right;
     margin-bottom: 5px;
 }
 
-.result-container{
+.result-container {
 
     margin: 0 auto;
 
