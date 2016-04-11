@@ -10,6 +10,12 @@ Apache v2.4.18
 php v5.6.10
 Matlab_R2015a
 
+Basic Usage
+1.Put this project folder "Webapp" into apache server root folder
+2.index.html(default),index2.html,index3.html are prepared for RR1,RR2,RR3 presentation respectively.
+3.The hamburger box on the upper-left could be used for switch the pages for different demonstration.
+Notice: RR3 function needs 5 around minutes to be fully executed.
+        So you need to be a little patient once you upload a patch of images
 
 Documentation structure:
 webapp(root):

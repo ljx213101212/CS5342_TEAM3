@@ -1,5 +1,7 @@
 <?php
 
+
+include 'php_execute_matlab.php';
 //extract($_POST);
 $errors = array();
 $imageTemp = array();
@@ -95,12 +97,6 @@ function clean_folder()
     }
 }
 
-function exe_matlab($matlab_method_name)
-{
-
-    shell_exec('chmod 777 start2.sh');
-    shell_exec('./start2.sh ' . $matlab_method_name);
-}
 
 
 ?>

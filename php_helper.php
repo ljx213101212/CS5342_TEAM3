@@ -1,6 +1,6 @@
 <?php
 
-
+include 'php_execute_matlab.php';
 clean_folder();
 $algo_name = $_POST['algo_select'];
 
@@ -26,8 +26,8 @@ if (isset($_FILES['image'])) {
     if (empty($errors) == true) {
         move_uploaded_file($file_tmp, "resource/" . $file_name);
         //start shell command to make matlan run
-        shell_exec('chmod 777 start.sh');
-        shell_exec('./start.sh ' . $matlab_method_name);
+        exe_matlab($algo_name);
+        //Keep waiting util matlab code finished
         echo json_encode(['success' => "image processed!"]);
     } else {
         print_r($errors);

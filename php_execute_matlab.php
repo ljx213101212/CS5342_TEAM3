@@ -8,9 +8,10 @@
 
 function exe_matlab($matlab_method_name)
 {
-
-    shell_exec('chmod 777 start2.sh');
-    shell_exec('./start2.sh ' . $matlab_method_name);
+    //Give shell script highest privilege.
+    shell_exec('chmod 777 start.sh');
+    //run matlab code
+    shell_exec('./start.sh ' . $matlab_method_name);
 }
 
 
