@@ -10,6 +10,19 @@ Apache v2.4.18
 php v5.6.10
 Matlab_R2015a
 
+Route configuration:
+
+1. change line 107 in index.html,index2.html and index3.html into your server path
+   eg: "http://YourServerDocumentationRoute:yourport/webapp/php_helper.php" (for index.html,index2.html)
+       "http://YourServerDocumentationRoute:yourport/webapp/php_helper_multiple.php"(for index3.html)
+2. change line 3 ,line 4 in start.sh file, for line3, you need to change reference your sever path
+   eg: "cd "/YourServerPathInLocalFormat/webapp/function/"
+   For line 4, you need to add matlab environment into current terminal.
+   eg(on Mac) "export PATH="/YourServerPathInLocalFormatToMatlabInstallation/MATLAB_R2015a.app/bin:$PATH""
+3. change line 9 in function/RR1.m , RR2.m and line 16 in function/RR3.m  into your apache documentation root
+   eg: "/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/"
+
+
 Basic Usage
 1.Put this project folder "Webapp" into apache server root folder
 2.index.html(default),index2.html,index3.html are prepared for RR1,RR2,RR3 presentation respectively.
