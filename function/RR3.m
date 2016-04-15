@@ -32,7 +32,7 @@ num_of_img = length(img_names);
 image = cell(1, num_of_img);
 for i = 1 : num_of_img
     image{i} = im2double(imread(fullfile(input_path, img_names{i})));
-    image{i} = imresize(imfilter(image{i}, fspecial('gaussian',7,1.), 'same', 'replicate'), 0.01, 'bicubic');
+    image{i} = imresize(imfilter(image{i}, fspecial('gaussian',7,1.), 'same', 'replicate'), 0.5, 'bicubic');
 end
 
 
