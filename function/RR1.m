@@ -51,11 +51,11 @@ end
 for i=1:num_intr_png
     lambda = 2;  % Can be tuned
     fprintf(logpath,'\nProcessing intrinsic_images-%d...\n',i);
-    path = [path_intr_png,list_intr_png(i).name]; 
+    path = [path_intr_png,list_intr_png(i).name];
     I = im2double(imread(path));
     [R S time] = intrinsic_images(I,lambda);
     fprintf(logpath,'Time consumption: %.4fs\n',time);
-    
+
     cd ../result
     %saveas(imshow(S),['shading_',num2str(floor(time*1000))],'png');
     %saveas(imshow(R),['reflection_',num2str(floor(time*1000))],'png');

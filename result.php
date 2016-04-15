@@ -51,6 +51,10 @@ $util = new Utils();
                 <h3>Result</h3>
                 <img class="img-responsive my-dotted-border" src="<?= HTML_OUTPUT_IMG_PATH ?><?= $result ?>"/>
             </div>
+
+            <?php
+                copy(OUT_IMG_PATH.'/'.$result, OUT_ARCHIVE_IMG_PATH.'/'.$result);
+            ?>
         </div>
 
     </div>

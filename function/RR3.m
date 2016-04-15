@@ -132,6 +132,9 @@ for i = 2 : num_of_img
 end
 
 total_time = floor(toc * 1000);
+logpath = fopen('../result/RR3_log.txt','w');
+fprintf(logpath,'LOG\n');
+ fprintf(logpath,'Time consumption: %.4fs\n',time);
 
 % fprintf('\ntotal time = %fs\n', toc);
 % figure,
