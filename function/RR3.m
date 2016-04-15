@@ -32,7 +32,7 @@ num_of_img = length(img_names);
 image = cell(1, num_of_img);
 for i = 1 : num_of_img
     image{i} = im2double(imread(fullfile(input_path, img_names{i})));
-    image{i} = imresize(imfilter(image{i}, fspecial('gaussian',7,1.), 'same', 'replicate'), 0.5, 'bicubic');
+    image{i} = imresize(imfilter(image{i}, fspecial('gaussian',7,1.), 'same', 'replicate'), 0.01, 'bicubic');
 end
 
 
@@ -132,9 +132,9 @@ for i = 2 : num_of_img
 end
 
 total_time = floor(toc * 1000);
-logpath = fopen('../result/RR3_log.txt','w');
+logpath = fopen([output_path,'RR3_log.txt'],'w');
 fprintf(logpath,'LOG\n');
- fprintf(logpath,'Time consumption: %.4fs\n',time);
+fprintf(logpath,'Time consumption: %.4fs\n',total_time);
 
 % fprintf('\ntotal time = %fs\n', toc);
 % figure,

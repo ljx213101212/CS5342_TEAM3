@@ -39,9 +39,29 @@ $util = new Utils();
                 //$dir = INPUT_IMG_PATH;
                 //$array = scandir($dir, 1);
                 $array = $util->get_input_array();
+                $filecount = 0;
+                if (glob(INPUT_IMG_PATH . '/*.{jpg,png}',GLOB_BRACE))
+                {
+                    $filecount = count(glob(INPUT_IMG_PATH . '/*.{jpg,png}',GLOB_BRACE));
+                   // echo $filecount;
+                }else{
+                    echo "no image in resource folder";
+                }
                 ?>
-                <img class="img-responsive my-dotted-border" src="<?= HTML_INPUT_IMG_PATH ?><?= $array[0] ?>"
-                     style="width:68%;"/>
+
+                <?php
+                 if ($filecount > 1) {
+                     ?>
+                     <img class="img-responsive my-dotted-border" src="<?= HTML_INPUT_IMG_PATH ?><?= $array[0] ?>"
+                          style="width:68%;"/>
+                     <?php
+                 }else {
+                     ?>
+                     <img class="img-responsive my-dotted-border" src="<?= HTML_INPUT_IMG_PATH ?><?= $array[0] ?>"
+                          style="width:100%;"/>
+                     <?php
+                 }
+                ?>
 
             </div>
 
