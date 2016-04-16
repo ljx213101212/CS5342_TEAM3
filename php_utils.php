@@ -25,7 +25,7 @@ class Utils
         $mark = 0;
         foreach ($array as $key => $value) {
 
-            $temp = split('_', $value);
+            $temp = explode('_', $value);//$temp = split('_', $value);
             //print_r($temp);
             foreach ($temp as $key2 => $value2) {
 
