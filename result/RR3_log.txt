@@ -1,2 +1,0 @@
-LOG
-Time consumption: 2720.0000s

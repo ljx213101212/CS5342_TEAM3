@@ -71,6 +71,13 @@ $util = new Utils();
                         <div class="span4">
                             <div id="image-data">
 
+                                <div class="exe_time">
+                                    <?php
+                                        $log_name = $util->get_log_name();
+                                        $exe_time = $util->get_exe_time($log_name);
+                                    ?>
+                                    <h1><?=$exe_time?></h1>
+                                </div>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
                                          aria-valuemin="0" aria-valuemax="100" style="width:70%">

@@ -51,26 +51,43 @@ class Utils
     function get_log_name(){
 
         $dir = OUT_IMG_PATH;
-        $file = 'somefile.txt';
-        $searchfor = 'name';
+        $file_ext = scandir($dir, 1);
 
-// the following line prevents the browser from parsing this as HTML.
-        header('Content-Type: text/plain');
 
-// get the file contents, assuming the file to be readable (and exist)
-        $contents = file_get_contents($file);
-// escape special characters in the query
-        $pattern = preg_quote($searchfor, '/');
-// finalise the regular expression, matching the whole line
-        $pattern = "/^.*$pattern.*\$/m";
-// search, and store all matching occurences in $matches
-        if(preg_match_all($pattern, $contents, $matches)){
-            echo "Found matches:\n";
-            echo implode("\n", $matches[0]);
+        for ($i = 0; $i < count($file_ext); $i++) {
+            $ext = pathinfo($dir.$file_ext[$i], PATHINFO_EXTENSION);
+            if ($ext == 'txt') {
+                return $file_ext[$i];
+            }
+
         }
-        else{
-            echo "No matches found";
+    }
+
+
+    function get_exe_time($txt_name){
+
+        $txt_path = OUT_IMG_PATH.'/'.$txt_name;
+        $handle = fopen($txt_path, "r") or die("Unable to open file!");
+//echo fread($myfile, filesize($src.$txt_name));
+//$handle = fopen("inputfile.txt", "r");
+        if ($handle) {
+            while (($line = fgets($handle)) !== false) {
+                // process the line read.
+                //echo $line;
+                $domain = strstr($line, ':');
+                if ($domain) {
+                    $exe_time = explode(":", $domain);
+                    //echo $exe_time[1];
+                    return $exe_time[1];
+                }
+            }
+
+            fclose($handle);
+        } else {
+            // error opening the file.
         }
+
+        fclose($handle);
     }
 
 
