@@ -52,7 +52,7 @@ $util = new Utils();
                 <?php
                     if ($filecount > 1){
                         $temp = "";
-                        $width = 100/($filecount);
+                        $width = 134/($filecount);
                         for ($x=0; $x<=$filecount-1; $x++){
                         $temparray = $array[$x];
                         $temp = $temp."<img class=\"img-responsive my-dotted-border\" src=\"".HTML_INPUT_IMG_PATH.$temparray."\"style=\"width:".$width."%;\"/>";   
@@ -60,7 +60,7 @@ $util = new Utils();
                     }
                     else{
                         $temparray = $array[0];
-                        $temp = "<img class=\"img-responsive my-dotted-border\" src=\"".HTML_INPUT_IMG_PATH.$temparray."\"style=\"width:100%;\"/>";
+                        $temp = "<img class=\"img-responsive my-dotted-border\" src=\"".HTML_INPUT_IMG_PATH.$temparray."\"style=\"width:67%;\"/>";
                     }
                 ?>
                 <?= $temp ?>
@@ -70,15 +70,16 @@ $util = new Utils();
             <?php
             $name_prefix = "background";
             $result = $util->get_output_image_name($name_prefix);
-            ?>
-            <div class="col-lg-6 text-centered">
-                <h3>Result</h3>
-                <img class="img-responsive my-dotted-border" src="<?= HTML_OUTPUT_IMG_PATH ?><?= $result ?>" style="width:100%;"/>
-            </div>
-
-            <?php
             copy(OUT_IMG_PATH.'/'.$result, OUT_ARCHIVE_IMG_PATH.'/'.$result);
+            $temp = "";
+            $temp = $temp."<h3>Result (".$name_prefix.")</h3>"."<img class=\"img-responsive my-dotted-border\" src=\"".HTML_OUTPUT_IMG_PATH.$result."\"style=\"width:67%;\"/>";
+            $name_prefix = "reflection";
+            $result = $util->get_output_image_name($name_prefix);
+            copy(OUT_IMG_PATH.'/'.$result, OUT_ARCHIVE_IMG_PATH.'/'.$result);
+            $temp = $temp."<h3>Result (".$name_prefix.")</h3>"."<img class=\"img-responsive my-dotted-border\" src=\"".HTML_OUTPUT_IMG_PATH.$result."\"style=\"width:67%;\"/>";
             ?>
+
+            <div class="col-lg-6 text-centered"><?= $temp ?></div>
         </div>
 
     </div>
