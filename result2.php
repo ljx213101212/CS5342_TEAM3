@@ -50,18 +50,20 @@ $util = new Utils();
                 ?>
 
                 <?php
-                 if ($filecount > 1) {
-                     ?>
-                     <img class="img-responsive my-dotted-border" src="<?= HTML_INPUT_IMG_PATH ?><?= $array[0] ?>"
-                          style="width:68%;"/>
-                     <?php
-                 }else {
-                     ?>
-                     <img class="img-responsive my-dotted-border" src="<?= HTML_INPUT_IMG_PATH ?><?= $array[0] ?>"
-                          style="width:100%;"/>
-                     <?php
-                 }
+                    if ($filecount > 1){
+                        $temp = "";
+                        $width = 100/($filecount);
+                        for ($x=0; $x<=$filecount-1; $x++){
+                        $temparray = $array[$x];
+                        $temp = $temp."<img class=\"img-responsive my-dotted-border\" src=\"".HTML_INPUT_IMG_PATH.$temparray."\"style=\"width:".$width."%;\"/>";   
+                        }
+                    }
+                    else{
+                        $temparray = $array[0];
+                        $temp = "<img class=\"img-responsive my-dotted-border\" src=\"".HTML_INPUT_IMG_PATH.$temparray."\"style=\"width:100%;\"/>";
+                    }
                 ?>
+                <?= $temp ?>
 
             </div>
 
@@ -71,7 +73,7 @@ $util = new Utils();
             ?>
             <div class="col-lg-6 text-centered">
                 <h3>Result</h3>
-                <img class="img-responsive my-dotted-border" src="<?= HTML_OUTPUT_IMG_PATH ?><?= $result ?>"/>
+                <img class="img-responsive my-dotted-border" src="<?= HTML_OUTPUT_IMG_PATH ?><?= $result ?>" style="width:100%;"/>
             </div>
 
             <?php
