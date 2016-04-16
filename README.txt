@@ -22,6 +22,9 @@ Route configuration:
 3. change line 9 in function/RR1.m , RR2.m and line 16 in function/RR3.m  into your apache documentation root
    eg: "/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/"
 
+4. change line 14 in php_constants.php to measure the host file structure into apache documentation root
+   eg:  "/Users/jixiang/Documents/ISS/SEProject/team_git/webapp/"
+
 
 Basic Usage
 1.Put this project folder "Webapp" into apache server root folder

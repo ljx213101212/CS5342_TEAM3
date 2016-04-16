@@ -40,9 +40,9 @@ $util = new Utils();
                 //$array = scandir($dir, 1);
                 $array = $util->get_input_array();
                 $filecount = 0;
-                if (glob(INPUT_IMG_PATH . '/*.{jpg,png}',GLOB_BRACE))
+                if (glob(INPUT_IMG_PATH . '/*.{jpg,png,jpeg,JPG,PNG,JPEG}',GLOB_BRACE))
                 {
-                    $filecount = count(glob(INPUT_IMG_PATH . '/*.{jpg,png}',GLOB_BRACE));
+                    $filecount = count(glob(INPUT_IMG_PATH . '/*.{jpg,png,jpeg,JPG,PNG,JPEG}',GLOB_BRACE));
                    // echo $filecount;
                 }else{
                     echo "no image in resource folder";

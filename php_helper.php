@@ -17,7 +17,7 @@ if (isset($_FILES['image'])) {
 
     $matlab_method_name = $algo_name;
 
-    $expensions = array("jpg", "png");
+    $expensions = array("jpg", "png", "jpeg");
 
     if (in_array($file_ext, $expensions) === false) {
         $errors[] = "extension not allowed, please choose a JPEG or PNG file.";
