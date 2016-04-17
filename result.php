@@ -44,15 +44,32 @@ $util = new Utils();
             </div>
 
             <?php
+            //create new history folder
+            $new_folder = $util ->create_subfolder(1);
+
+            //backup reflection result
             $name_prefix = "reflection";
             $result = $util->get_output_image_name($name_prefix);
             copy(OUT_IMG_PATH.'/'.$result, OUT_ARCHIVE_IMG_PATH.'/'.$result);
+            $dest_path = OUT_RR1_IMG_PATH.$new_folder.'/'.$result;
+            copy(OUT_IMG_PATH.'/'.$result, $dest_path);
             $temp = "";
             $temp = $temp."<h3>Result (".$name_prefix.")</h3>"."<img class=\"img-responsive my-dotted-border\" src=\"".HTML_OUTPUT_IMG_PATH.$result."\"style=\"width:67%;\"/>";
+
+            //back up shading result
             $name_prefix = "shading";
             $result = $util->get_output_image_name($name_prefix);
             copy(OUT_IMG_PATH.'/'.$result, OUT_ARCHIVE_IMG_PATH.'/'.$result);
+            $dest_path = OUT_RR1_IMG_PATH.$new_folder.'/'.$result;
+            copy(OUT_IMG_PATH.'/'.$result, $dest_path);
             $temp = $temp."<h3>Result (".$name_prefix.")</h3>"."<img class=\"img-responsive my-dotted-border\" src=\"".HTML_OUTPUT_IMG_PATH.$result."\"style=\"width:67%;\"/>";
+
+
+            //back up log file
+
+            $log_name = $util ->get_log_name();
+            $dest_path = OUT_RR1_IMG_PATH.$new_folder.'/'.$log_name;
+            copy(OUT_IMG_PATH.'/'.$log_name, $dest_path);
             ?>
 
             <div class="col-lg-6 text-centered"><?= $temp ?></div>

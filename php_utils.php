@@ -15,6 +15,28 @@ class Utils
         return $input_array;
     }
 
+    function get_subfolder_list($folderPath){
+
+        $temp_array = scandir($folderPath,1);
+        $result_array = array();
+
+        for ($i = 0; $i < count($temp_array);$i++){
+            if ($temp_array[$i] != '.DS_Store'
+                and $temp_array[$i] != '..'
+                and $temp_array[$i] != '.') {
+                /* $filename is legal; doesn't contain illegal character. */
+                array_push($result_array,$temp_array[$i]);
+            }
+            else {
+                /* $filename contains at least one illegal character. */
+                continue;
+            }
+
+        }
+
+        return $result_array;
+    }
+
     function get_output_image_name($prefix)
     {
         $dir = OUT_IMG_PATH;
@@ -88,6 +110,27 @@ class Utils
         }
 
         fclose($handle);
+    }
+
+    function create_subfolder($algo){
+
+        $folder_dic = "";
+        if ($algo == 1){
+            $folder_dic = OUT_RR1_IMG_PATH;
+        }else if ($algo == 2){
+            $folder_dic = OUT_RR2_IMG_PATH;
+        }else if ($algo = 3){
+            $folder_dic = OUT_RR3_IMG_PATH;
+        }else{
+            $folder_dic = OUT_RR1_IMG_PATH;
+        }
+
+        $date  = new DateTime();//this returns the current date time
+        $today = $date->format('Y_m_d_H_i_s');
+
+        mkdir($folder_dic.$today);
+        return $today;
+
     }
 
 
